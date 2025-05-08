@@ -1,0 +1,152 @@
+/* Outer container */
+.scroll-container {
+  background-color: #065F16; /* dark green */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInBody 1s ease-in-out;
+}
+
+/* Content Box */
+.scroll-content {
+  display: flex;
+  background-color: #F7F5DC; /* creamy yellow */
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 1500px;
+  width: 95%;
+  opacity: 0;
+  animation: fadeInBox 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Image Side */
+.smoothie-image {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  animation: slideInLeft 1.2s ease-in-out;
+}
+
+/* Text Side */
+.text-section {
+  width: 50%;
+  padding: 60px;
+  background-color: #F7F5DC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideInRight 1.2s ease-in-out;
+}
+
+/* Headings */
+.text-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #3DAE4F; /* button green */
+  font-style: italic;
+}
+
+/* Paragraph */
+.text-section p {
+  color: #444;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* Button */
+.explore-button {
+  padding: 14px 30px;
+  background-color: #3DAE4F;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #2C8C3E;
+  transform: scale(1.08) rotate(-1deg);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .scroll-content {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .smoothie-image,
+  .text-section {
+    width: 100%;
+  }
+
+  .text-section {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .text-section h2 {
+    font-size: 28px;
+  }
+
+  .text-section p {
+    font-size: 16px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInBox {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBody {
+  from {
+    background-color: #044E12;
+  }
+  to {
+    background-color: #065F16;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

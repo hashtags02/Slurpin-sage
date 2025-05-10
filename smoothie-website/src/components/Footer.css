@@ -1,0 +1,83 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(135deg, #d3d4bb, #d3dec6);
+  border-top: 2px solid #e5efca;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #004d00;
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 800px;
+}
+
+.footer-top h2 {
+ 
+  margin-bottom: 10px;
+  color: #027a48;
+  font-size: 40px;
+  font-weight: 900px;
+}
+
+.footer-top p {
+  font-size: 16px;
+  color: #104d34;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #036c39;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #036c39;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #036c39;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #068135;
+  font-size: 14px;
+  color: #036c39;
+}
